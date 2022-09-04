@@ -7,6 +7,7 @@ process.on('unhandledRejection', (reason, p) =>
 );
 
 async function main() {
+  console.log("Environment:", process.env);
   const app = createApp();
   await startApp(app);
   logger.info(`Feathers application started on http://${app.get('host')}:${app.get('port')}`);
